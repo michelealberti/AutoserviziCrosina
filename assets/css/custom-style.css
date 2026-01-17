@@ -107,22 +107,28 @@ body {
 
 .header1 .mbr-overlay {
   background: linear-gradient(135deg, 
-    rgba(26, 54, 93, 0.85) 0%, 
-    rgba(44, 82, 130, 0.7) 50%,
-    rgba(49, 130, 206, 0.5) 100%) !important;
+    rgba(26, 54, 93, 0.9) 0%, 
+    rgba(44, 82, 130, 0.85) 50%,
+    rgba(26, 54, 93, 0.8) 100%) !important;
   opacity: 1 !important;
 }
 
 .header1 .mbr-section-title {
   font-weight: 800 !important;
-  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3);
+  color: var(--white) !important;
+  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-out;
+}
+
+.header1 .mbr-section-title strong {
+  color: var(--white) !important;
 }
 
 .header1 .mbr-text {
   font-size: 1.3rem !important;
   line-height: 1.8 !important;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 

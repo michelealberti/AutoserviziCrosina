@@ -49,6 +49,9 @@
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=wBRD6T"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=wBRD6T" type="text/css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom-style.css">
 
   
   
@@ -95,7 +98,7 @@
 
     
 
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(237, 245, 225);"></div>
+    <div class="mbr-overlay"></div>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -107,6 +110,10 @@
 <br>Cortesia,puntualità e professionalità sono la nostra arma vincente per far si che ogni vostro viaggio sia un’esperienza indimenticabile.
 <br>
 <br>Buon viaggio...&nbsp;<br></p>
+                
+                <div class="mbr-section-btn mt-4">
+                    <a class="btn btn-primary display-4" href="#form7-5">Richiedi Preventivo</a>
+                </div>
                 
             </div>
         </div>
@@ -433,8 +440,55 @@
         </div>
     </div>
 </section>
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>
+
+<!-- Custom Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Smooth scroll per link interni
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Animazioni scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.item-wrapper, .card-wrapper, .mbr-section-head').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+});
+</script>
   
 </body>
 </html>

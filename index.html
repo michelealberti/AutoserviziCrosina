@@ -161,27 +161,73 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="#" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+                <form action="https://formsubmit.co/michele.alberti79@gmail.com" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Richiesta Preventivo">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Nuova Richiesta Preventivo - Autoservizi Crosina">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
                         Compila questi dati per inviarci direttamente una richiesta di preventivo</p>
                     <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Grazie! La tua richiesta è stata inviata con successo.</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+                            Si è verificato un problema. Riprova più tardi.
                         </div>
                     </div>
                     <div class="dragArea row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form7-5">
+                        <!-- Riferimento (Nome e cognome) -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="riferimento">
+                            <input type="text" name="Riferimento (Nome e Cognome)" placeholder="Riferimento (Nome e Cognome) *" data-form-field="riferimento" class="form-control" required id="riferimento-form7-5">
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form7-5">
+                        
+                        <!-- Email -->
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="Email" placeholder="Email *" data-form-field="email" class="form-control" required id="email-form7-5">
                         </div>
-                        <div data-for="phone" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
-                            <input type="tel" name="phone" placeholder="Phone" data-form-field="phone" class="form-control" value="" id="phone-form7-5">
+                        
+                        <!-- Telefono -->
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group mb-3" data-for="phone">
+                            <input type="tel" name="Telefono" placeholder="Telefono *" data-form-field="phone" class="form-control" required id="phone-form7-5">
                         </div>
-                        <div class="col-auto mbr-section-btn align-center">
-                            <button type="submit" class="btn btn-primary display-4">Submit</button>
+                        
+                        <!-- Luogo di partenza -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="luogo-partenza">
+                            <input type="text" name="Luogo di Partenza" placeholder="Luogo di Partenza" data-form-field="luogo-partenza" class="form-control" id="luogo-partenza-form7-5">
+                        </div>
+                        
+                        <!-- Meta -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="meta">
+                            <input type="text" name="Meta" placeholder="Meta" data-form-field="meta" class="form-control" id="meta-form7-5">
+                        </div>
+                        
+                        <!-- Luogo di rientro -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="luogo-rientro">
+                            <input type="text" name="Luogo di Rientro" placeholder="Luogo di Rientro" data-form-field="luogo-rientro" class="form-control" id="luogo-rientro-form7-5">
+                        </div>
+                        
+                        <!-- Data di partenza -->
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group mb-3" data-for="data-partenza">
+                            <input type="date" name="Data di Partenza" placeholder="Data di Partenza" data-form-field="data-partenza" class="form-control" id="data-partenza-form7-5">
+                        </div>
+                        
+                        <!-- Data di rientro -->
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group mb-3" data-for="data-rientro">
+                            <input type="date" name="Data di Rientro" placeholder="Data di Rientro" data-form-field="data-rientro" class="form-control" id="data-rientro-form7-5">
+                        </div>
+                        
+                        <!-- Numero di partecipanti -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="partecipanti">
+                            <input type="number" name="Numero di Partecipanti" placeholder="Numero di Partecipanti" data-form-field="partecipanti" class="form-control" min="1" id="partecipanti-form7-5">
+                        </div>
+                        
+                        <!-- Note -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="note">
+                            <textarea name="Note" placeholder="Note aggiuntive" data-form-field="note" class="form-control" rows="4" id="note-form7-5"></textarea>
+                        </div>
+                        
+                        <div class="col-12 col-md-auto mbr-section-btn align-center">
+                            <button type="submit" class="btn btn-primary display-4">Invia Richiesta</button>
                         </div>
                     </div>
                 </form>

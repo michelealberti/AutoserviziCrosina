@@ -507,3 +507,38 @@ section {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+/* === FIX CONTRASTO TESTI === */
+/* Testo dentro al form (sfondo bianco) */
+.form7 form .mbr-text {
+  color: var(--text-medium) !important;
+}
+
+.form7 form p {
+  color: var(--text-medium) !important;
+}
+
+/* Labels e testi del form */
+.form7 .form-control {
+  color: var(--text-dark) !important;
+}
+
+.form7 .form-control::placeholder {
+  color: var(--text-light) !important;
+}
+
+/* Titoli sezione servizi */
+.features25 .mbr-section-subtitle {
+  color: var(--text-medium) !important;
+}
+
+/* Testo nella sezione contatti */
+.contacts3 .card-title,
+.contacts3 .mbr-text {
+  color: var(--primary-dark) !important;
+}
+
+/* Sottotitolo galleria */
+.gallery6 .mbr-section-subtitle {
+  color: var(--text-medium) !important;
+}
